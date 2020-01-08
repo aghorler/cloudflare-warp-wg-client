@@ -6,8 +6,8 @@ prv=~/.wgcf/private.key
 usr=~/.wgcf/identity.cfg
 
 tun="wg09"
-ip link delete ${tun}
-ip link add dev "${tun}" type wireguard
+sudo ip link delete ${tun}
+sudo ip link add dev "${tun}" type wireguard
 echo "Will use interface: ${tun}"
 
 if [ -e "${usr}" ]; then
